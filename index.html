@@ -11,9 +11,17 @@
     <a href="popup_page.html" target="_blank">open popup with href</a>
     <br />
     <br />
-    <a href="javascript:void(0);" onclick="openPopup()">open opup with onclick</a>
+    <a href="javascript:void(0);" onclick="openPopup()">open popup with onclick</a>
     <br />
     <br />
+    <hr />
+    <a href="index.html" target="_blank">open main with href</a>
+    <br />
+    <br />
+    <a href="javascript:void(0);" onclick="openMain()">open main with onclick</a>
+    <br />
+    <br />
+    <hr>
     <button onclick="showHistory()">show history</button>
     <h4 id="history"></h4>
 
@@ -23,6 +31,10 @@
   <script>
     function openPopup() {
       window.open("popup_page.html");
+    }
+
+    function openMain(){
+      window.open("/index.html");
     }
 
     function showHistory() {
