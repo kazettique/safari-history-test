@@ -8,20 +8,42 @@
   </head>
   <body>
     <h1>this is main page</h1>
+    <hr />
+
+    <h2>open popup page in new page links</h2>
     <a href="popup_page.html" target="_blank">open popup with href</a>
     <br />
     <br />
     <a href="javascript:void(0);" onclick="openPopup()">open popup with onclick</a>
     <br />
     <br />
+
     <hr />
+    <h2>open main page in new page links</h2>
     <a href="index.html" target="_blank">open main with href</a>
     <br />
     <br />
     <a href="javascript:void(0);" onclick="openMain()">open main with onclick</a>
     <br />
     <br />
-    <hr>
+
+    <h2>go to popup page links</h2>
+    <a href="popup_page.html">go to popup with href</a>
+    <br />
+    <br />
+    <a href="javascript:void(0);" onclick="goToPopup()">go to popup with onclick</a>
+    <br />
+    <br />
+
+    <h2>go to main page</h2>
+    <a href="index.html" target="_blank">go to main with href</a>
+    <br />
+    <br />
+    <a href="javascript:void(0);" onclick="goToMain()">go to main with onclick</a>
+    <br />
+    <br />
+
+    <hr />
     <button onclick="showHistory()">show history</button>
     <h4 id="history"></h4>
 
@@ -33,8 +55,16 @@
       window.open("popup_page.html");
     }
 
-    function openMain(){
+    function openMain() {
       window.open("/safari-history-test/index.html");
+    }
+
+    function goToPopup(){
+      window.location.href = "popup_page.html";
+    }
+
+    function goToMain(){
+      window.location.href = "index.html";
     }
 
     function showHistory() {
