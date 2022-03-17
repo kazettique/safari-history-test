@@ -12,11 +12,25 @@
     <br />
     <br />
     <a href="javascript:void(0);" onclick="openPopup()">popup link 2</a>
+    <br />
+    <br />
+    <button onclick="showHistory()">show history</button>
+    <h4 id="history"></h4>
   </body>
 
   <script>
     function openPopup() {
       window.open("popup_page.html");
+    }
+
+    function showHistory() {
+      const length = "length: " + JSON.stringify(history.length);
+      const state = "state: " + JSON.stringify(history.state);
+
+      const output = length + "  " + state;
+
+      const historyElement = document.querySelector("#history");
+      historyElement.textContent = output;
     }
   </script>
 </html>
