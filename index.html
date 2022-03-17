@@ -8,5 +8,14 @@
 </head>
 <body>
   <h1>this is main page</h1>
+  <a href="popup_page.html" target="_blank">popup page link 1</a>
+  <a href="javascript:void(0);" onclick="openPopup()">popup page link 2</a>
 </body>
+
+<script>
+  function openPopup() {
+    window.open('popup_page.html');
+  }
+</script>
+
 </html>
