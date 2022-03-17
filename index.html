@@ -16,6 +16,8 @@
     <br />
     <button onclick="showHistory()">show history</button>
     <h4 id="history"></h4>
+
+    <h4 id="userAgent"></h4>
   </body>
 
   <script>
@@ -32,5 +34,9 @@
       const historyElement = document.querySelector("#history");
       historyElement.textContent = output;
     }
+
+    (function test() {
+      document.querySelector("#userAgent").textContent = JSON.stringify(navigator.userAgent);
+    })();
   </script>
 </html>
